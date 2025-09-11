@@ -3,143 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mulai Hari Sehat & Cantikmu Bersama Markas Herbal – Produk Terpercaya untukmu. Dapatkan produk herbal terbaik dengan mudah dan aman.">
-  <title>Markas Herbal - Produk Herbal Terpercaya</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Swiper.js CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Mulai Hari Sehat & Cantikmu Bersama Markas Herbal – Produk Terpercaya untukmu">
+  <title>Markas Herbal - Produk Terbaik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .carousel-item { display: none; }
+    .carousel-item.active { display: block; }
+  </style>
 </head>
-<body>
+<body class="bg-white font-sans">
 
-  <!-- Hero / Carousel -->
-  <header>
-    <div class="swiper hero-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url('https://source.unsplash.com/1600x900/?healthy,smile')">
-          <div>
-            <h1>Mulai Hari Sehat & Cantikmu Bersama Markas Herbal</h1>
-            <p>Dapatkan produk terbaik dengan mudah dan aman.</p>
-            <a class="cta-btn" href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Pesan Sekarang!</a>
-          </div>
-        </div>
-        <div class="swiper-slide" style="background-image:url('https://source.unsplash.com/1600x900/?herbal,organic')">
-          <div>
-            <h1>Produk Herbal Terpercaya untuk Keluarga Sehat</h1>
-            <p>Ribuan pelanggan puas dengan kualitas kami.</p>
-            <a class="cta-btn" href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Pesan Sekarang!</a>
-          </div>
-        </div>
-      </div>
-      <!-- Pagination -->
-      <div class="swiper-pagination"></div>
+  <!-- Header / Hero Section -->
+  <section class="relative bg-green-500 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl font-bold mb-4">Mulai Hari Sehat & Cantikmu Bersama Markas Herbal</h1>
+      <p class="mb-6 text-lg">Dapatkan produk terbaik dengan mudah dan aman.</p>
+      <a href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank" class="bg-red-500 hover:bg-red-700 px-6 py-3 rounded text-white font-bold">Produk Herbal Terbaik, Pesan Sekarang!</a>
     </div>
-  </header>
-
-  <!-- Keunggulan / Benefit -->
-  <section class="benefits">
-    <div class="benefit">✅<p>Terdaftar BPOM & Aman</p></div>
-    <div class="benefit">🚚<p>Dikirim Cepat ke Seluruh Indonesia</p></div>
-    <div class="benefit">💰<p>Promo & Diskon Menarik</p></div>
-    <div class="benefit">⭐<p>Ribuan Pelanggan Puas</p></div>
-  </section>
-
-  <!-- Flash Sale -->
-  <section class="flash-sale">
-    <h2>Flash Sale</h2>
-    <div class="swiper flash-sale-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide product-card">
-          <img src="https://source.unsplash.com/220x220/?herbal,medicine" alt="Hemo Lab">
-          <h3>Hemo Lab</h3>
-          <p>Produk Herbal Ampuh</p>
-          <a href="https://shopee.co.id/Hemolab-Original-Atasi-Gejala-Wasir-Ambeien-Obat-Herbal-Asli-100-Manjur-BPOM-i.1000569166.19989371156" class="buy-btn" target="_blank">Beli Sekarang</a>
-        </div>
-        <div class="swiper-slide product-card">
-          <img src="https://source.unsplash.com/220x220/?herbal,health" alt="Ortomove">
-          <h3>Ortomove</h3>
-          <p>Obat Nyeri Sendi & Tulang</p>
-          <a href="https://shopee.co.id/ORTOMOVE-ASLI-ORIGINAL-ISI-30-KAPSUL-ORTHO-MOVE-RESMI-BPOM-OBAT-NYERI-SENDI-DAN-TULANG-REMATIK-SYARAF-KEJEPIT-ASAM-URAT-PALING-AMPUH-BUKTIKAN-i.1000569166.40461314988" class="buy-btn" target="_blank">Beli Sekarang</a>
-        </div>
-        <div class="swiper-slide product-card">
-          <img src="https://source.unsplash.com/220x220/?herbal,organic" alt="ATH Thibbun">
-          <h3>ATH Thibbun</h3>
-          <p>Obat Asam Urat & Kolesterol</p>
-          <a href="https://shopee.co.id/ATH-THIBBUN-NABAWI-obat-asam-urat-dan-kolesterol-nyeri-sendi-paling-ampuh-i.1000569166.21194065294" class="buy-btn" target="_blank">Beli Sekarang</a>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
+    <!-- Carousel -->
+    <div class="carousel relative max-w-4xl mx-auto mt-10">
+      <img src="https://cf.shopee.co.id/file/1.jpg" class="carousel-item active mx-auto rounded shadow-lg">
+      <img src="https://cf.shopee.co.id/file/2.jpg" class="carousel-item mx-auto rounded shadow-lg">
+      <img src="https://cf.shopee.co.id/file/3.jpg" class="carousel-item mx-auto rounded shadow-lg">
     </div>
   </section>
 
-  <!-- Produk Populer -->
-  <section class="popular">
-    <h2>Produk Populer Kami</h2>
-    <div class="popular-grid">
-      <div class="popular-card">
-        <img src="https://source.unsplash.com/220x220/?herbal,ginseng" alt="Tungingo">
-        <h3>Tungingo</h3>
-        <p>Herbal Batu Ginjal</p>
-        <a href="https://shopee.co.id/Tungingo-Asli-100-Original-Herbal-Bantu-Meluruhkan-Batu-Ginjal-i.1000569166.19894066014" class="buy-btn" target="_blank">Beli Sekarang</a>
-      </div>
-      <div class="popular-card">
-        <img src="https://source.unsplash.com/220x220/?herbal,ointment" alt="Youzhi">
-        <h3>Youzhi</h3>
-        <p>Salep Gatal & Eksim</p>
-        <a href="https://shopee.co.id/Youzhi-Salep-Gatal-Eksim-%E2%80%93-Solusi-Ampuh-Mengatasi-Gatal-dan-Iritasi-Kulit-Ampuh-Original-i.1000569166.20588708802" class="buy-btn" target="_blank">Beli Sekarang</a>
-      </div>
-      <div class="popular-card">
-        <img src="https://source.unsplash.com/220x220/?herbal,cream" alt="NFKreain">
-        <h3>NFKreain</h3>
-        <p>Gel Pereda Nyeri Sendi</p>
-        <a href="https://shopee.co.id/NFKreain-Gel-Sendi-Glukosamin-Original-Gel-Untuk-Pereda-Nyeri-Sendi-Otot-Pereda-Nyeri-Bahu-i.1000569166.22057554090" class="buy-btn" target="_blank">Beli Sekarang</a>
+  <!-- Keunggulan Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Dipercaya Ribuan Pelanggan Setia</h2>
+      <div class="grid md:grid-cols-4 gap-6 text-center">
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-check fa-2x text-green-500 mb-2"></i>
+          <p>Terdaftar BPOM & Aman</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-truck fa-2x text-green-500 mb-2"></i>
+          <p>Dikirim Cepat ke Seluruh Indonesia</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-tags fa-2x text-green-500 mb-2"></i>
+          <p>Promo & Diskon Menarik</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-star fa-2x text-green-500 mb-2"></i>
+          <p>Ribuan Pelanggan Puas</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimoni -->
-  <section class="testimoni">
-    <h2>Apa Kata Pelanggan Kami?</h2>
-    <div class="swiper testimoni-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide testimoni-card">
-          <p>"Produk herbalnya ampuh banget! Cepat sampai dan berkualitas."</p>
-          <strong>– Ani, Jakarta</strong>
+  <!-- Flash Sale Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Flash Sale</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg">
+          <img src="https://cf.shopee.co.id/file/hemolab.jpg" class="mb-4 rounded">
+          <h3 class="font-bold mb-2">Hemo Lab</h3>
+          <p class="text-green-600 mb-4">Harga: RpXX.XXX</p>
+          <a href="https://shopee.co.id/Hemolab-Original-Atasi-Gejala-Wasir-Ambeien-Obat-Herbal-Asli-100-Manjur-BPOM-i.1000569166.19989371156" target="_blank" class="bg-red-500 hover:bg-red-700 px-4 py-2 rounded text-white">Beli Sekarang</a>
         </div>
-        <div class="swiper-slide testimoni-card">
-          <p>"Sangat puas! Harga terjangkau dan pelayanan ramah."</p>
-          <strong>– Budi, Bandung</strong>
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg">
+          <img src="https://cf.shopee.co.id/file/ortomove.jpg" class="mb-4 rounded">
+          <h3 class="font-bold mb-2">Ortomove</h3>
+          <p class="text-green-600 mb-4">Harga: RpXX.XXX</p>
+          <a href="https://shopee.co.id/ORTOMOVE-ASLI-ORIGINAL-ISI-30-KAPSUL-ORTHO-MOVE-RESMI-BPOM-OBAT-NYERI-SENDI-DAN-TULANG-REMATIK-SYARAF-KEJEPIT-ASAM-URAT-PALING-AMPUH-BUKTIKAN-i.1000569166.40461314988" target="_blank" class="bg-red-500 hover:bg-red-700 px-4 py-2 rounded text-white">Beli Sekarang</a>
         </div>
-        <div class="swiper-slide testimoni-card">
-          <p>"Rekomendasi untuk keluarga. Aman dan efektif."</p>
-          <strong>– Sari, Surabaya</strong>
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg">
+          <img src="https://cf.shopee.co.id/file/ath_thibbun.jpg" class="mb-4 rounded">
+          <h3 class="font-bold mb-2">ATH Thibbun</h3>
+          <p class="text-green-600 mb-4">Harga: RpXX.XXX</p>
+          <a href="https://shopee.co.id/ATH-THIBBUN-NABAWI-obat-asam-urat-dan-kolesterol-nyeri-sendi-paling-ampuh-i.1000569166.21194065294" target="_blank" class="bg-red-500 hover:bg-red-700 px-4 py-2 rounded text-white">Beli Sekarang</a>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </section>
 
-  <!-- CTA Akhir -->
-  <section class="cta-final">
-    <h2>Temukan Produk Favoritmu Sekarang!</h2>
-    <a href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Beli Sekarang</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>Ikuti kami di: 
-      <a href="#">TikTok</a> | 
-      <a href="#">Facebook</a> | 
-      <a href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Shopee</a>
-    </p>
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="mb-4">Follow us on:</p>
+      <div class="flex justify-center gap-4 mb-4">
+        <a href="#" target="_blank"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank"><i class="fa-brands fa-shopify fa-2x"></i></a>
+      </div>
+      <p>&copy; 2025 Markas Herbal. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <!-- JS for Carousel -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if(i === index) slide.classList.add('active');
+      });
+    }
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+    setInterval(nextSlide, 3000); // 3 detik otomatis slide
+  </script>
+
 </body>
 </html>
