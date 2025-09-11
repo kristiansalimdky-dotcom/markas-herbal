@@ -11,8 +11,67 @@
   
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  
-  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {font-family: 'Inter', sans-serif; margin:0; padding:0; line-height:1.6; color:#333;}
+    header, section {padding:50px 20px;}
+    h1, h2, h3 {margin-bottom:15px;}
+    a {text-decoration:none;}
+
+    /* Hero */
+    header {position:relative; height:100vh;}
+    .hero-swiper .swiper-slide {
+      background-size:cover; background-position:center; position:relative; height:100vh;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .hero-swiper .swiper-slide::before {
+      content:""; position:absolute; inset:0; background:rgba(0,0,0,0.5);
+    }
+    .hero-swiper .swiper-slide div {
+      position:relative; z-index:2; color:#fff; text-align:center; max-width:700px; padding:20px;
+    }
+    .cta-btn {
+      display:inline-block; background:#22c55e; color:#fff; padding:15px 30px;
+      border-radius:8px; font-weight:600; margin-top:20px; transition:0.3s;
+    }
+    .cta-btn:hover {background:#16a34a;}
+
+    /* Benefits */
+    .benefits {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; text-align:center; margin:50px 0;}
+    .benefit {background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); font-size:18px;}
+    .benefit p {margin:10px 0 0;}
+
+    /* Flash Sale */
+    .flash-sale {background:#fefce8; border-top:2px solid #facc15; border-bottom:2px solid #facc15;}
+    .flash-sale h2 {text-align:center; margin-bottom:20px;}
+    .flash-sale .countdown {text-align:center; font-weight:bold; color:#dc2626; margin-bottom:20px;}
+    .product-card {background:#fff; padding:20px; border-radius:12px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    .product-card img {width:100%; border-radius:8px; margin-bottom:10px; transition:0.3s;}
+    .product-card:hover img {transform:scale(1.05);}
+    .buy-btn {display:inline-block; margin-top:10px; padding:10px 20px; background:#ef4444; color:#fff; border-radius:6px;}
+    .buy-btn:hover {background:#b91c1c;}
+
+    /* Produk Populer */
+    .popular h2 {text-align:center; margin-bottom:30px;}
+    .popular-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .popular-card {background:#fff; padding:20px; border-radius:12px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:relative;}
+    .popular-card img {width:100%; border-radius:8px; transition:0.3s;}
+    .popular-card:hover img {transform:scale(1.05);}
+    .popular-card::before {content:"Best Seller"; position:absolute; top:10px; left:10px; background:#22c55e; color:#fff; padding:4px 8px; border-radius:6px; font-size:12px;}
+
+    /* Testimoni */
+    .testimoni h2 {text-align:center; margin-bottom:30px;}
+    .testimoni-card {background:#f9fafb; padding:30px; border-radius:12px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+    .stars {color:#facc15; margin-bottom:10px;}
+
+    /* CTA Akhir */
+    .cta-final {background:linear-gradient(90deg,#22c55e,#16a34a); color:#fff; text-align:center; padding:60px 20px;}
+    .cta-final a {background:#fff; color:#16a34a; padding:15px 30px; border-radius:8px; font-weight:bold; display:inline-block; margin-top:20px;}
+
+    /* Footer */
+    footer {background:#111; color:#bbb; text-align:center; padding:30px 20px; font-size:14px;}
+    footer a {color:#22c55e; margin:0 8px;}
+  </style>
 </head>
 <body>
 
@@ -20,27 +79,26 @@
   <header>
     <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1615141033666-666b6aa0ef18?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1615141033666-666b6aa0ef18?q=80&w=1170&auto=format&fit=crop');">
           <div>
             <h1>Mulai Hari Sehat & Cantikmu Bersama Markas Herbal</h1>
             <p>Dapatkan produk terbaik dengan mudah dan aman.</p>
-            <a class="cta-btn" href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Pesan Sekarang!</a>
+            <a class="cta-btn" href="https://shopee.co.id/markas_herbal99" target="_blank">Pesan Sekarang!</a>
           </div>
         </div>
-        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1688678004194-e22d547ed705?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1688678004194-e22d547ed705?q=80&w=1170&auto=format&fit=crop');">
           <div>
             <h1>Produk Herbal Terpercaya untuk Keluarga Sehat</h1>
             <p>Ribuan pelanggan puas dengan kualitas kami.</p>
-            <a class="cta-btn" href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Pesan Sekarang!</a>
+            <a class="cta-btn" href="https://shopee.co.id/markas_herbal99" target="_blank">Pesan Sekarang!</a>
           </div>
         </div>
       </div>
-      <!-- Pagination -->
       <div class="swiper-pagination"></div>
     </div>
   </header>
 
-  <!-- Keunggulan / Benefit -->
+  <!-- Keunggulan -->
   <section class="benefits">
     <div class="benefit">✅<p>Terdaftar BPOM & Aman</p></div>
     <div class="benefit">🚚<p>Dikirim Cepat ke Seluruh Indonesia</p></div>
@@ -51,24 +109,25 @@
   <!-- Flash Sale -->
   <section class="flash-sale">
     <h2>Flash Sale</h2>
+    <div class="countdown">⏳ Promo berakhir dalam: 02:15:45</div>
     <div class="swiper flash-sale-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide product-card">
           <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0h-mc6oru5jleiz9e@resize_w900_nl.webp" alt="Hemo Lab">
           <h3>Hemo Lab</h3>
-          <p>Produk Herbal Ampuh</p>
+          <p><del>Rp210.000</del> <strong>Rp159.000</strong></p>
           <a href="https://shopee.co.id/Hemolab-Original-Atasi-Gejala-Wasir-Ambeien-Obat-Herbal-Asli-100-Manjur-BPOM-i.1000569166.19989371156" class="buy-btn" target="_blank">Beli Sekarang</a>
         </div>
         <div class="swiper-slide product-card">
           <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mcxz8yui1wag08@resize_w900_nl.webp" alt="Ortomove">
           <h3>Ortomove</h3>
-          <p>Obat Nyeri Sendi & Tulang</p>
+          <p><del>Rp300.000</del> <strong>Rp229.000</strong></p>
           <a href="https://shopee.co.id/ORTOMOVE-ASLI-ORIGINAL-ISI-30-KAPSUL-ORTHO-MOVE-RESMI-BPOM-OBAT-NYERI-SENDI-DAN-TULANG-REMATIK-SYARAF-KEJEPIT-ASAM-URAT-PALING-AMPUH-BUKTIKAN-i.1000569166.40461314988" class="buy-btn" target="_blank">Beli Sekarang</a>
         </div>
         <div class="swiper-slide product-card">
           <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lmq6jz1tpk4fc3@resize_w900_nl.webp" alt="ATH Thibbun">
           <h3>ATH Thibbun</h3>
-          <p>Obat Asam Urat & Kolesterol</p>
+          <p><del>Rp250.000</del> <strong>Rp199.000</strong></p>
           <a href="https://shopee.co.id/ATH-THIBBUN-NABAWI-obat-asam-urat-dan-kolesterol-nyeri-sendi-paling-ampuh-i.1000569166.21194065294" class="buy-btn" target="_blank">Beli Sekarang</a>
         </div>
       </div>
@@ -107,14 +166,17 @@
     <div class="swiper testimoni-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide testimoni-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
           <p>"Produk herbalnya ampuh banget! Cepat sampai dan berkualitas."</p>
           <strong>– Ani, Jakarta</strong>
         </div>
         <div class="swiper-slide testimoni-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
           <p>"Sangat puas! Harga terjangkau dan pelayanan ramah."</p>
           <strong>– Budi, Bandung</strong>
         </div>
         <div class="swiper-slide testimoni-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
           <p>"Rekomendasi untuk keluarga. Aman dan efektif."</p>
           <strong>– Sari, Surabaya</strong>
         </div>
@@ -126,20 +188,43 @@
   <!-- CTA Akhir -->
   <section class="cta-final">
     <h2>Temukan Produk Favoritmu Sekarang!</h2>
-    <a href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Beli Sekarang</a>
+    <a href="https://shopee.co.id/markas_herbal99" target="_blank">Beli Sekarang</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Ikuti kami di: 
+    <p><strong>Markas Herbal</strong></p>
+    <p>Alamat: Jakarta, Indonesia | WhatsApp: +62 812-3456-7890 | Email: info@markasherbal.com</p>
+    <p>
+      Ikuti kami di: 
       <a href="#">TikTok</a> | 
       <a href="#">Facebook</a> | 
-      <a href="https://shopee.co.id/markas_herbal99?entryPoint=ShopBySearch&searchKeyword=markas_herbal99" target="_blank">Shopee</a>
+      <a href="https://shopee.co.id/markas_herbal99" target="_blank">Shopee</a>
     </p>
+    <p>&copy; 2025 Markas Herbal. All Rights Reserved.</p>
   </footer>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    const heroSwiper = new Swiper('.hero-swiper', {
+      pagination: { el: '.swiper-pagination', clickable: true },
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      loop: true
+    });
+
+    const flashSwiper = new Swiper('.flash-sale-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+
+    const testiSwiper = new Swiper('.testimoni-swiper', {
+      pagination: { el: '.swiper-pagination', clickable: true },
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      loop: true
+    });
+  </script>
 </body>
 </html>
