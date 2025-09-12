@@ -266,5 +266,47 @@
 </script>
 
   </script>
+    <!-- Script Countdown Flash Sale -->
+  <script>
+    // Atur jam reset harian (misalnya jam 23:59:59 setiap hari)
+    const resetHour = 23, resetMinute = 59, resetSecond = 59;
+
+    function getResetTime() {
+      const now = new Date();
+      const reset = new Date();
+
+      reset.setHours(resetHour, resetMinute, resetSecond, 999);
+
+      if (now > reset) {
+        reset.setDate(reset.getDate() + 1); // pindah ke hari berikutnya
+      }
+      return reset;
+    }
+
+    let endTime = getResetTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = endTime - now;
+
+      if (distance <= 0) {
+        endTime = getResetTime(); // reset otomatis
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      const el = document.querySelector(".flash-sale .countdown");
+      if (el) {
+        el.textContent = `⏳ Promo berakhir dalam: ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
 </body>
 </html>
