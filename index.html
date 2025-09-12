@@ -80,6 +80,7 @@
 
   <!-- Hero / Carousel -->
   <header>
+    <!-- Logo di atas hero -->
     <div class="logo-wrapper">
       <img src="https://down-tx-id.img.susercontent.com/id-11134233-7quky-lgr16zpmn4iz29_tn.webp" alt="Markas Herbal Logo">
     </div>
@@ -116,10 +117,9 @@
   <!-- Flash Sale -->
   <section class="flash-sale">
     <h2>Flash Sale</h2>
-    <div class="countdown">⏳ Promo berakhir dalam: --:--:--</div>
+    <div class="countdown">⏳ Promo berakhir dalam: 02:15:45</div>
     <div class="swiper flash-sale-swiper">
       <div class="swiper-wrapper">
-        <!-- Produk Flash Sale -->
         <div class="swiper-slide">
           <div class="product-card">
             <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0h-mc6oru5jleiz9e@resize_w900_nl.webp" alt="Hemo Lab">
@@ -153,14 +153,42 @@
   <section class="popular">
     <h2>Produk Populer Kami</h2>
     <div class="popular-grid">
-      <!-- Produk Populer Card -->
       <div class="popular-card">
         <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98y-lmq5a7u4hc0732@resize_w900_nl.webp" alt="Tungingo">
         <h3>Tungingo</h3>
         <p>Herbal Batu Ginjal</p>
         <a href="https://shopee.co.id/Tungingo-Asli-100-Original-Herbal-Bantu-Meluruhkan-Batu-Ginjal-i.1000569166.19894066014" class="buy-btn" target="_blank">Beli Sekarang</a>
       </div>
-      <!-- Tambah produk lain sesuai kebutuhan -->
+      <div class="popular-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasl-m5d053pgu6zs95@resize_w900_nl.webp" alt="Youzhi">
+        <h3>Youzhi</h3>
+        <p>Salep Gatal & Eksim</p>
+        <a href="https://shopee.co.id/Youzhi-Salep-Gatal-Eksim-%E2%80%93-Solusi-Ampuh-Mengatasi-Gatal-dan-Iritasi-Kulit-Ampuh-Original-i.1000569166.20588708802" class="buy-btn" target="_blank">Beli Sekarang</a>
+      </div>
+      <div class="popular-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0r-mcj6lhe1v31459@resize_w900_nl.webp" alt="LifPro Herbal Original">
+        <h3>LifPro Herbal Original</h3>
+        <p>Obat Tumor & Kanker</p>
+        <a href="https://shopee.co.id/LifPro-Herbal-Original-Solusi-Atasi-Kanker-Obat-Tumor-Ganas-Obat-Kanker-isi-60-Kapsul-i.1000569166.23183047332" class="buy-btn" target="_blank">Beli Sekarang</a>
+      </div>
+      <div class="popular-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasl-m5d053pgu6zs95@resize_w900_nl.webp" alt="Testomax Booster">
+        <h3>Testomax Booster</h3>
+        <p>Suplemen Pria Herbal</p>
+        <a href="s://shopee.co.id/(-TERLARIS-)-Testomax-Booster-100-Original-Suplemen-Pria-Dewasa-Asli-Herbal-Alami-i.1000569166.21580612869" class="buy-btn" target="_blank">Beli Sekarang</a>
+      </div>
+      <div class="popular-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m8taptr7a7oe67@resize_w900_nl.webp" alt="VIMAX">
+        <h3>VIMAX</h3>
+        <p>Obat Kesehatan Pria</p>
+        <a href="https://shopee.co.id/VIMAX-KAPSUL-OBAT-KESEHATAN-PRIA-AMPUH-ASLI-ORIGINAL-ISI-30-i.1000569166.22942359208" class="buy-btn" target="_blank">Beli Sekarang</a>
+      </div>
+      <div class="popular-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0k-mc5xutwqi2ovae@resize_w900_nl.webp" alt="NFKreain">
+        <h3>NFKreain</h3>
+        <p>Gel Pereda Nyeri Sendi</p>
+        <a href="https://shopee.co.id/NFKreain-Gel-Sendi-Glukosamin-Original-Gel-Untuk-Pereda-Nyeri-Sendi-Otot-Pereda-Nyeri-Bahu-i.1000569166.22057554090" class="buy-btn" target="_blank">Beli Sekarang</a>
+      </div>
     </div>
   </section>
 
@@ -214,17 +242,15 @@
     <p>&copy; 2025 Markas Herbal. All Rights Reserved.</p>
   </footer>
 
-  <!-- Swiper JS + Countdown -->
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
-    // Swiper Hero
     const heroSwiper = new Swiper('.hero-swiper', {
       pagination: { el: '.swiper-pagination', clickable: true },
       autoplay: { delay: 4000, disableOnInteraction: false },
       loop: true
     });
 
-    // Swiper Flash Sale
     const flashSwiper = new Swiper('.flash-sale-swiper', {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -232,49 +258,11 @@
       breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
     });
 
-    // Swiper Testimoni
     const testiSwiper = new Swiper('.testimoni-swiper', {
       pagination: { el: '.swiper-pagination', clickable: true },
       autoplay: { delay: 5000, disableOnInteraction: false },
       loop: true
     });
-
-    // === Countdown Flash Sale (reset tiap hari 23:59:59) ===
-    function getResetTime() {
-      const now = new Date();
-      const reset = new Date();
-
-      reset.setHours(23, 59, 59, 999); // jam reset harian
-
-      // kalau sudah lewat, set ke hari berikutnya
-      if (now > reset) {
-        reset.setDate(reset.getDate() + 1);
-      }
-
-      return reset;
-    }
-
-    let endTime = getResetTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = endTime - now;
-
-      if (distance < 0) {
-        endTime = getResetTime(); // reset otomatis
-        return;
-      }
-
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.querySelector(".countdown").innerHTML =
-        `⏳ Promo berakhir dalam: ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
   </script>
 </body>
 </html>
