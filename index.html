@@ -263,45 +263,6 @@
       autoplay: { delay: 5000, disableOnInteraction: false },
       loop: true
     });
-
-    <script>
-  // Atur jam reset harian (contoh: 23:59:59 setiap hari)
-  function getResetTime() {
-    const now = new Date();
-    const reset = new Date();
-
-    reset.setHours(23, 59, 59, 999); // jam 23:59:59
-
-    // kalau waktu sekarang sudah lewat jam reset → set ke hari berikutnya
-    if (now > reset) {
-      reset.setDate(reset.getDate() + 1);
-    }
-
-    return reset;
-  }
-
-  let endTime = getResetTime();
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = endTime - now;
-
-    if (distance < 0) {
-      // set target baru untuk hari berikutnya
-      endTime = getResetTime();
-      return;
-    }
-
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.querySelector(".countdown").innerHTML =
-      `⏳ Promo berakhir dalam: ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
-  }
-
-  setInterval(updateCountdown, 1000);
-  updateCountdown(); // biar langsung tampil
 </script>
 
   </script>
